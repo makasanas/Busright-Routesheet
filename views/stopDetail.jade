@@ -1,5 +1,5 @@
 block content
-    div(class= noStudent  ? "stop-direction-info noStudent" : "stop-direction-info")
+    div(class= noStudent && isMap? "stop-direction-info noStudent" : "stop-direction-info")
         each step, i in leg.maneuver
             .step-info
                 p(style='font-weight: bold;') #{i + 1}

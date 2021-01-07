@@ -4,11 +4,11 @@ block content
             p.student-heading
                 | Students : 
                 span student name
-            each student ,index in students
+            each student ,index in leg.students
                 .student-info
                     h4 
-                        | {student.fullName}
+                        | #{student.fullName}
                     div
                         p
-                        | ID : {student.districts[0].studentId} | Grade : {student.districts[0].grade}
+                        | ID : #{student.districts[0].studentId} | Grade : #{student.districts[0].grade}
                         p School : {props.schoolName}
