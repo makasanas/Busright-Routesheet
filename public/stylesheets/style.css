@@ -1,0 +1,237 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.route-export-details .logo {
+    height: 25px;
+}
+
+.route-export-details p {
+    margin: 0;
+}
+
+.route-export-details label {
+    font-weight: 700;
+}
+
+.route-export-details .print-header {
+    display: flex;
+    padding: 5px 0;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.route-export-details .print-header .route-title {
+    margin-right: 20px;
+    width: 100%;
+}
+
+.route-export-details .print-header .route-title p {
+    margin: 0;
+    font-size: 14px;
+    color: #868686;
+    font-weight: 400;
+    border-bottom: 1px solid #dedede;
+    padding: 5px 0;
+}
+
+.route-export-details .print-header h2 {
+    width: 100%;
+    margin: 0;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.route-export-details .print-header h2 span {
+    font-weight: 700;
+}
+
+.route-export-details .print-header p {
+    margin: 0;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.route-export-details .student-heading {
+    font-size: 16px;
+    color: #666;
+}
+
+.route-export-details .student-heading span {
+    font-weight: 700;
+    color: #000;
+}
+
+.route-export-details .routing-print-studentList {
+    width: calc(100% - 280px);
+    margin: 0 10px;
+}
+
+.route-export-details .routing-print-studentList .student-info {
+    display: flex;
+    margin: 10px 0;
+}
+
+.route-export-details .routing-print-studentList .student-info h4,
+.route-export-details .routing-print-studentList .student-info p {
+    margin: 0;
+}
+
+.route-export-details .routing-print-studentList .student-info h4 {
+    width: 200px;
+}
+
+.route-export-details .routing-print-studentList .student-info p {
+    font-size: 14px;
+    color: #999;
+}
+
+.route-export-details .route-note {
+    margin: 20px 0;
+}
+
+.route-export-details .route-note p {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #999;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+
+.route-export-details .route-info-details {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.route-export-details .route-info-details .route-info-div {
+    width: calc(35% - 10px);
+}
+
+.route-export-details .route-info-details .route-info-item {
+    display: flex;
+    margin: 5px 0;
+}
+
+.route-export-details .route-info-details .route-info-item label {
+    width: 90px;
+    white-space: nowrap;
+}
+
+.route-export-details .route-info-details p {
+    font-weight: 500;
+    margin: 0;
+}
+
+.route-direct-list .route-direct-info {
+    margin: 10px 0;
+    margin-top: 30px;
+}
+
+.route-direct-list .route-direct-info .stop-heading {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.route-direct-list .route-direct-info .stop-heading p {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.route-direct-list .route-direct-info .stop-heading .stop-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.route-direct-list .route-direct-info .stop-heading .dot-line {
+    height: 2px;
+    border-bottom: 1px dotted #dedede;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.route-direct-list .route-direct-info .routing-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.route-direct-list .route-direct-info .routing-info.reverseRow {
+    flex-direction: row-reverse;
+}
+
+.route-direct-list .route-direct-info .routing-info .routing-image {
+    page-break-after: always;
+}
+
+.route-direct-list .route-direct-info .routing-info .routing-image img {
+    margin-top: 10px;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info.noStudent {
+    width: calc(100% - 280px);
+    margin-right: 10px;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info .step-info {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #dedede;
+    align-items: center;
+    position: relative;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info .step-info p {
+    margin: 5px 10px;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info .step-info .step-travel-info {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info .step-info .stop-direction-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.route-direct-list .route-direct-info .stop-direction-info .step-info .stop-direction-icon.right-icon {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+
+@media print {
+    @page {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .route-stop-student {
+        break-inside: avoid;
+    }
+
+    .step-info {
+        break-inside: avoid;
+    }
+
+    .routing-info {
+        display: table;
+    }
+
+    .routing-image {
+        display: table-header-group;
+    }
+}

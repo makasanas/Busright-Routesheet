@@ -1,0 +1,32 @@
+
+block content
+   .route-info-details
+    .route-info-div
+        .route-info-item
+            label  Driver : 
+            p  #{routeData.assignedDriver ? routeData.assignedDriver.fullName : '-'}
+        .route-info-item
+            label  Schedule : 
+            p #{routeSchedule(routeData.scheduleType)}
+        .route-info-item
+            label  School : 
+            p 'school-name'
+    .route-info-div
+        .route-info-item
+            label  Start Time : 
+            p #{routeData.startTime ? getTime(routeData.startTime * 1000) : '-'}
+        .route-info-item
+            label  End Time : 
+            p #{routeData.endTime ? getTime(routeData.endTime * 1000): '-'}
+    .route-info-div
+        .route-info-item
+            label  Total Riders : 
+            p  #{routeData.numberOfStudents}
+        
+        .route-info-item
+            label  Max Load : 
+            p #{routeData.vehicle ? routeData.vehicle.capacity : '-'}
+   .route-note
+        label Route Note :
+        p #{routeData.notes ? routeData.notes : '-'}
+      

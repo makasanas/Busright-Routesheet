@@ -1,0 +1,9 @@
+block content
+    div(class= noStudent  ? "stop-direction-info noStudent" : "stop-direction-info")
+        each step, i in leg.maneuver
+            .step-info
+                p(style='font-weight: bold;') #{i + 1}
+                p #{(step.instruction).replace(/<[^>]+>/g, '')}
+                p.step-travel-info
+                    | Drive: 
+                    span #{metersToMiles(step.length) + ' '+ "miles"}, #{secondsTOHours(step.travelTime)}

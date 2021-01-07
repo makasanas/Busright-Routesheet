@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .route-export-details
+    img.logo(src='BusRightLogoYellowBlue.png' alt='{"BusRight"}')
+    .print-header
+      .route-title
+          h2
+            | Directions for: 
+            span #{routeData.name}
+        p
+          | Drive: 
+          span #{metersToMiles(routeDirection.summary.distance) + ' '+"miles"} |   #{secondsTOHours(routeDirection.summary.travelTime)}
+    include routeInfo
+    .route-direct-list
+          include stopInfo
+          

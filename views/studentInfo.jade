@@ -1,0 +1,14 @@
+block content
+    if !noStudent
+        .routing-print-studentList
+            p.student-heading
+                | Students : 
+                span student name
+            each student ,index in students
+                .student-info
+                    h4 
+                        | {student.fullName}
+                    div
+                        p
+                        | ID : {student.districts[0].studentId} | Grade : {student.districts[0].grade}
+                        p School : {props.schoolName}

@@ -1,0 +1,18 @@
+block content
+  each leg ,index in routeDirection.leg
+    .route-direct-info
+       div(class= index > 0 ? "route-stop-student" : "")
+        .stop-heading
+            p.stop-name #{getIndex(index)} : #{leg.stopName}
+            .dot-line
+            if leg.maneuver
+                p Drive:
+                    span #{metersToMiles(leg.length) + " " + "miles"}, &nbsp; #{secondsTOHours(leg.travelTime)}
+        div(class= noStudent  ? "routing-info reverseRow" : "routing-info")
+            if leg.maneuver
+                include studentInfo
+                .routing-image
+                        p.student-heading Pick Up : 
+                            span #{getTime(leg.maneuver[0].time)}
+                        img(src="#{getRoutingImage(leg.start.mappedPosition, leg.end.mappedPosition)}" alt='{"BusRight"}')
+                include stopDetail
